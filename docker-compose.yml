@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  comfyui:
+    build: .
+    image: comfyui:latest
+    container_name: comfyui
+    ports:
+      - "8188:8188"
+    volumes:
+      - type: bind
+        source: /data
+        target: /data
+    restart: always
